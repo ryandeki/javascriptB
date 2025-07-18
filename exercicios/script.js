@@ -17,7 +17,7 @@ function verificarIdade() {
     }
 
     else {
-        
+
         verificacao = "Menor de idade";
 
     }
@@ -98,18 +98,54 @@ function gerarTabuada() {
     let num1 = Number(document.getElementById("num1").value);
     let i;
     let contador;
+    let resultado = document.getElementById("resultado7");
+    resultado.innerHTML;
+
 
     for (i = 0; i < 11; i++) {
 
-        contador = num1 + " * " + i;
-        document.getElementById("resultado7").innerText = contador;
+        contador = num1 + " x " + i + " = " + (num1 * i) + "<br>";
+        resultado.innerHTML += contador;
 
     }
 
-    
+
 
 }
 
 function gerarContador() {
+
+    let resultado = document.getElementById("resultado8");
+    resultado.innerHTML = "";
+
+    for (let i = 1; i <= 10; i++) {
+
+        let paragrafo = document.createElement("p");
+        paragrafo.textContent = i;
+        resultado.appendChild(paragrafo);
+
+    }
+
+
+}
+
+function verificarMedia() {
+
+    let num1 = Number(document.getElementById("n3").value);
+    let num2 = Number(document.getElementById("n4").value);
+    let num3 = Number(document.getElementById("n5").value);
+    let media = (num1 + num2 + num3) / 3;
+
+    if (media >= 6) {
+
+        document.getElementById("resultado9").innerText = "Aprovado";
+
+    }
+
+    else {
+
+        document.getElementById("resultado9").innerText = "Reprovado";
+
+    }
 
 }
