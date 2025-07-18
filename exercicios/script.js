@@ -149,3 +149,100 @@ function verificarMedia() {
     }
 
 }
+
+function converterTemperatura() {
+
+    let num = Number(document.getElementById("n6").value);
+    let resultado = (num * 9 / 5) + 32;
+
+    document.getElementById("resultado10").innerText = resultado;
+
+}
+
+function imprimirDia() {
+
+    let num = Number(document.getElementById("n7").value);
+
+    if (num < 1 || num > 7) {
+
+        document.getElementById("resultado11").innerText = "Número inválido. Digite um número de 1 a 7";
+
+    }
+
+    else if (num == 1) {
+
+        document.getElementById("resultado11").innerText = "Domingo";
+
+    }
+
+    else if (num == 2) {
+
+        document.getElementById("resultado11").innerText = "Segunda-feira";
+
+    }
+
+    else if (num == 3) {
+
+        document.getElementById("resultado11").innerText = "Terça-feira";
+
+    }
+
+    else if (num == 4) {
+
+        document.getElementById("resultado11").innerText = "Quarta-feira";
+
+    }
+
+    else if (num == 5) {
+
+        document.getElementById("resultado11").innerText = "Quinta-feira";
+
+    }
+
+    else if (num == 6) {
+
+        document.getElementById("resultado11").innerText = "Sexta-feira";
+
+    }
+
+    else if (num == 7) {
+
+        document.getElementById("resultado11").innerText = "Sábado";
+
+    }
+
+}
+
+function verificarSenha() {
+
+    let senha = Number(document.getElementById("n8").value);
+
+    if (senha == 1234) {
+
+        document.getElementById("resultado12").innerText = "Acesso permitido!";
+
+    }
+
+    else {
+
+        document.getElementById("resultado12").innerText = "Senha incorreta.";
+
+    }
+
+}
+
+function gerarContagem() {
+
+    let resultado = document.getElementById("resultado13");
+    let contagem = "";
+
+    for (let i = 10; i >= 1; i--) {
+
+        contagem += i + "<br>";
+        resultado.innerHTML = contagem;
+
+    }
+
+
+
+}
